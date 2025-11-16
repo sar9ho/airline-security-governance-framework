@@ -1,0 +1,68 @@
+controls:
+  - id: AC-01
+    name: Unique User Authentication
+    policy: access_control_policy.md
+    description: All users must authenticate using unique credentials; shared accounts are prohibited except approved service accounts.
+    related_assets: [A01, A02, A04, A05]
+    nist_csf: [PR.AC-1]
+    iso_27001: [A.9.2.1]
+    evidence: 
+      - "IAM configuration export"
+      - "User account inventory"
+    owner_role: Security Engineering
+
+  - id: AC-02
+    name: MFA for Critical Access
+    policy: access_control_policy.md
+    description: Multi-factor authentication must be enforced for all administrative and remote access.
+    related_assets: [A01, A02, A04, A05, A06]
+    nist_csf: [PR.AC-7]
+    iso_27001: [A.9.4.2]
+    evidence:
+      - "IAM MFA policy screenshot"
+    owner_role: Security Engineering
+
+  - id: LM-01
+    name: Centralized Logging
+    policy: logging_monitoring_policy.md
+    description: Security-relevant events from Critical Assets must be sent to the SIEM.
+    related_assets: [A01, A02, A04, A05, A06]
+    nist_csf: [DE.CM-1, DE.CM-7]
+    iso_27001: [A.12.4.1]
+    evidence:
+      - "SIEM log source inventory"
+    owner_role: Security
+
+  - id: VM-01
+    name: Regular Authenticated Scanning
+    policy: vulnerability_management_policy.md
+    description: Authenticated vulnerability scans must be run on all in-scope assets at least monthly.
+    related_assets: [A01, A02, A04, A05]
+    nist_csf: [ID.RA-1]
+    iso_27001: [A.12.6.1]
+    evidence:
+      - "Vulnerability scan reports"
+    owner_role: Security
+
+  - id: IR-01
+    name: Incident Response Plan
+    policy: incident_response_policy.md
+    description: Documented IR plan must define roles, severity levels, and escalation procedures.
+    related_assets: [A01, A02, A04, A05, A06]
+    nist_csf: [RS.RP-1]
+    iso_27001: [A.16.1.1]
+    evidence:
+      - "Incident response runbook"
+    owner_role: Security
+
+  - id: VR-01
+    name: Vendor Security Review
+    policy: vendor_risk_management_policy.md
+    description: Critical vendors must undergo security assessment prior to onboarding and annually thereafter.
+    related_assets: [A03]
+    nist_csf: [ID.SC-1]
+    iso_27001: [A.15.1.1]
+    evidence:
+      - "Vendor security questionnaire"
+      - "SOC2/ISO certificates"
+    owner_role: Vendor Management
