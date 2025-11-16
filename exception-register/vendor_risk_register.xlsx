@@ -1,0 +1,5 @@
+Vendor ID	Vendor Name	Service Description	Data Classification Handled	Critical Asset Dependency	Risk Tier	Security Certifications	Last Assessment Date	Next Review Date	Risk Owner	Residual Risk Level	Notes
+V01	WorkForceCloud Inc.	HR & Payroll SaaS (A03)	Confidential	A03	High	SOC2 Type II, DPA	2025-01-15	2026-01-15	HR Systems Lead	Medium	Requires SSO+MFA; PII at rest + in transit encryption required
+V02	AuthSecure Identity Services	Identity & Access Mgmt (A04)	Restricted	A01,A02,A03,A05	Critical	ISO 27001, Pen-Test Report	2025-02-02	2025-08-02	Security Engineering Lead	Medium	Core IAM dependency; SaaS outage = enterprise-wide impact
+V03	FlyMetrics Data Analytics	Behavioral analytics & revenue modeling	Confidential	A02	Medium	Security Questionnaire	2025-02-20	2026-02-20	Data Engineering Lead	Low	Uses anonymized datasets; verify no re-identification vectors
+V04	SkyOps CommLink	Ground Ops messaging + dispatch	Restricted	A05	Critical	NDA, SLA Uptime Clauses	2025-01-30	2025-07-30	Operations Lead	High	Safety-critical OT dependency; must review backup comms plan

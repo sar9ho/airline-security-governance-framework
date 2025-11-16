@@ -1,0 +1,5 @@
+Exception ID	Date Raised	Related Policy ID(s)	Asset ID	Description of Exception	Risk ID (if linked)	Temporary? (Y/N)	Expiry / Review Date	Approved By	Compensating Controls	Residual Risk Level	Status	Notes
+E01	2025-01-10	ISP-04 (Patch Timelines)	A01	Critical security patch postponed due to production freeze	R01	Y	2025-03-31	Acting CISO	Web-App Firewall tightened + SIEM alerting	Medium	Approved	Must patch before next release
+E02	2025-01-14	DP-07 (Retention Limits)	A03	HR records retained 24 months beyond policy	R04	Y	2025-06-01	Awaiting Legal Review	Access restricted to HR+Legal; encrypted archive	Medium	Pending	Requires documented legal justification
+E03	2025-01-20	AC-02 (MFA Enforcement)	ADM-GRP	Temporary MFA bypass for automation script	R02	Y	2025-02-28	Security Director	Full session logging + isolated jump box	High	Approved – Urgent	Migrate to service account before expiry
+E04	2025-01-22	ENC-01 (Encryption Standard)	A05	Legacy OT module lacks approved crypto	R03	N	2025-09-01	COO	Network segmentation + VPN tunnel	High	Approved – Conditional	Q3 upgrade required; safety-critical
