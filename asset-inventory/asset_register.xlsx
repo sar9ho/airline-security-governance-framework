@@ -1,0 +1,21 @@
+| Column                      | Meaning                                       |
+| --------------------------- | --------------------------------------------- |
+| Asset ID                    | Unique identifier (A01, A02, etc.)            |
+| Asset Name                  | System/service name                           |
+| Asset Type                  | Technical / Data / Human / Vendor             |
+| Description                 | What it does                                  |
+| Owner                       | Who is responsible (role, not name)           |
+| Data Classification         | Public / Internal / Confidential / Restricted |
+| Availability Criticality    | Low / Medium / High                           |
+| Confidentiality Criticality | Low / Medium / High                           |
+| Integrity Criticality       | Low / Medium / High                           |
+| Dependencies                | Related assets                                |
+| Notes                       | Anything relevant                             |
+
+Asset ID | Asset Name | Asset Type | Description | Owner | Data Classification | Availability Criticality | Confidentiality Criticality | Integrity Criticality | Critical Asset | Dependencies | Notes
+A01 | Customer Booking Web App | Technical | Public-facing booking site supporting search, reservations, and account management | IT DevOps | Confidential | High | High | High | Yes | A04, A02 | Externally accessible; targeted for fraud & credential attacks
+A02 | Loyalty Rewards Database | Data | Central database storing customer profiles, loyalty points, transactional records | Data Engineering | Restricted | High | High | High | Yes | A01, A04 | Contains PII + stored-value reward points
+A03 | HR/Payroll SaaS (Workday-like) | Vendor | Third-party HR/payroll platform containing employee PII and compensation data | HR Systems | Confidential | Medium | High | High | Maybe | None (SaaS external) | Data hosted externally; contractual obligations apply
+A04 | Identity & Access Management (Auth0/AzureAD) | Technical | Core authentication, MFA, session management, and SSO platform for employees and customers | Security Engineering | Restricted | High | High | High | Yes | Cloud provider, A01, A02, A03 | Single point of failure for identity
+A05 | Airport Ops Dispatch System | OT Technical | Ground operations coordination system for scheduling, routing, and fleet communications | Operations | Restricted | High | High | High | Yes | A04 | Safety-critical; downtime disrupts physical operations
+A06 | Security Logs & SIEM Platform | Data | Aggregation, correlation, and investigation platform for security-relevant telemetry & alerts | Security | Restricted | Medium | High | High | Yes | A01, A04, A02, Endpoint agents | Used for incident response & forensics
