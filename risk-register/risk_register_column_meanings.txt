@@ -1,0 +1,6 @@
+Risk ID = R01, R02, ...
+Inherent Risk = Risk Score BEFORE controls
+Residual Risk = Risk Score AFTER controls
+Risk Category = Low/Medium/High (based on your risk_methodology.md scale)
+Status = Open, Mitigating, Accepted, Closed, Monitoring
+Review Date = calendar-based accountability (quarterly recommended)
