@@ -1,0 +1,36 @@
+site_name: SkyShield Airlines – Security Governance
+site_description: Simulated airline cybersecurity GRC program (risk, policies, vendors, exceptions, dashboards).
+site_author: Your Name
+repo_url: https://github.com/<your-username>/airline-security-governance-framework
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - search.highlight
+    - content.code.copy
+nav:
+  - Overview: index.md
+  - Methodology:
+      - Risk Methodology: methodology/risk_methodology.md
+      - Threat & Vulnerability Model: methodology/threat_model.md
+  - Assets & Classification:
+      - Asset Inventory: assets/asset_inventory.md
+      - Classification Criteria: assets/classification_criteria.md
+  - Risks & Dashboards:
+      - Risk Register: risks/risk_register.md
+      - Heatmap: risks/heatmap.md
+  - Policies:
+      - Access Control: policies/access_control_policy.md
+      - Logging & Monitoring: policies/logging_monitoring_policy.md
+      - Vulnerability Management: policies/vulnerability_management_policy.md
+      - Incident Response: policies/incident_response_policy.md
+      - Vendor Risk Management: policies/vendor_risk_management_policy.md
+      - Data Privacy: policies/data_privacy_policy.md
+  - Vendors & Exceptions:
+      - Vendor Risk Register: governance/vendor_risk.md
+      - Exception Register: governance/exceptions.md
+  - Program:
+      - Control Catalog: program/control_catalog.md
+      - Framework Mapping: program/framework_mapping.md
+      - Roadmap: program/roadmap.md

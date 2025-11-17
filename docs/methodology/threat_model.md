@@ -1,0 +1,67 @@
+# SkyShield Airlines – Threat Model
+
+This document identifies and categorizes credible cyber threats and associated vulnerabilities that could impact SkyShield Airlines assets. Threats are informed by MITRE ATT&CK and STRIDE, while vulnerabilities represent conditions that increase likelihood of exploitation.
+
+---
+
+## 1. STRIDE Threat Category Definitions
+
+| Category | Description | Example |
+|----------|-------------|---------|
+| **S – Spoofing** | Identity impersonation | Account takeover |
+| **T – Tampering** | Unauthorized modification | DB integrity compromise |
+| **R – Repudiation** | Actions not provable / denial | Unlogged admin actions |
+| **I – Information Disclosure** | Data leakage | PII exposure |
+| **D – Denial of Service** | Service disruption | DDoS, ransomware downtime |
+| **E – Elevation of Privilege** | Unauthorized access gain | Privilege escalation |
+
+---
+
+## 2. High-Level Threat Sources (MITRE-informed)
+
+| Threat Source | Example Motivation |
+|---------------|--------------------|
+| Cybercriminal groups | Fraud, data theft, ransomware |
+| Insider threats | Malicious or negligent behavior |
+| Nation-state / APT | Espionage, infrastructure disruption |
+| Hacktivists | Political disruption |
+| Rogue vendors | Third-party negligence or compromise |
+
+---
+
+## 3. Top Industry-Relevant Threat Events (Aviation Context)
+
+| Threat Event | Description | Likely Tactics (MITRE) |
+|--------------|-------------|-------------------------|
+| Credential Stuffing | Automated login attempts using leaked creds | T1110 – Brute Force |
+| Phishing & Malware Delivery | Social engineering to deploy payloads | T1566 – Phishing |
+| Privilege Escalation | Moving from low → high privilege accounts | T1068 – Exploit Elevation |
+| Data Exfiltration | Unauthorized transfer of data | TA0010 – Exfiltration |
+| Disruption of Operational Technology | Airport/dispatch downtime | T0814 – ICS Impact |
+| Supply Chain Compromise | Vendor software breach | T1195 – Supply Chain |
+
+---
+
+## 4. Vulnerability Conditions (Examples)
+
+| Vulnerability Type | Description |
+|--------------------|-------------|
+| Weak or reused credentials | No MFA enforcement, stale accounts |
+| Missing encryption | Data or logs stored in plaintext |
+| Missing security logging & monitoring | Incomplete telemetry |
+| Excessive permissions | Over-privileged accounts |
+| Dependency on third-party availability | No redundancy or alternate vendor |
+| Unpatched systems | Known CVEs not remediated |
+
+---
+
+## 5. Threat-to-Vulnerability Pair Examples
+
+| Threat Event | Vulnerability Condition | Resulting Risk |
+|--------------|-------------------------|----------------|
+| Credential Stuffing | Weak passwords or no MFA | A01 account takeover |
+| Phishing | Poor security awareness training | Malware infection & lateral movement |
+| Database Exploit | Unpatched DB version | Customer data exposure (A02) |
+| IAM Failure | Misconfigured SSO/MFA | Privilege escalation to critical systems |
+| Vendor Outage | No SLA review or redundancy | Payroll disruption or legal issues |
+
