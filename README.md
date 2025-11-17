@@ -48,7 +48,7 @@ airline-security-governance-framework/
 ---
 
 ## Dashboard Demo  
-A lightweight Next.js + Tailwind dashboard visualizes:
+A Next.js + Tailwind dashboard visualizing:
 
 - Key risk metrics  
 - Vendor residual risk  
@@ -62,7 +62,7 @@ cd web
 npm install
 npm run dev
 ```
---
+
 
 ## Live Docs Site
 
@@ -82,7 +82,7 @@ mkdocs serve
 - Connect to cloud storage for evidence and audit artifacts
 
 ## Author
-Name: Sarah Ouda
-Email: sar9h.ouda@gmail.com / sho10@duke.edu
-Website: https://www.saraho.org/
-Project: https://github.com/sar9ho/airline-security-governance-framework
+- Name: Sarah Ouda
+- Email: sar9h.ouda@gmail.com / sho10@duke.edu
+- Website: https://www.saraho.org/
+- Project: https://github.com/sar9ho/airline-security-governance-framework
