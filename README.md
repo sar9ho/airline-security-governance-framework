@@ -23,13 +23,13 @@ This repository contains a full cybersecurity governance, risk, and compliance (
 ## Repo Structure
 
 airline-security-governance-framework/
-├── asset-inventory → asset register & classification
-├── policies → formal security governance policies
-├── risk-register → risk scoring, heatmap data & script
-├── exception-register → exceptions & vendor risk logs
-├── dashboard → python heatmap code + exports
-├── docs → full MKDocs documentation site
-└── web → Next.js dashboard prototype
+asset-inventory: asset register & classification
+policies: formal security governance policies
+risk-register: risk scoring, heatmap data & script
+exception-register: exceptions & vendor risk logs
+dashboard: python heatmap code + exports
+docs: full MKDocs documentation site
+web: Next.js dashboard prototype
 
 ---
 
