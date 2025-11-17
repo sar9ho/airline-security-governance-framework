@@ -1,4 +1,4 @@
-# SkyShield Airlines — Cybersecurity Governance Program  
+# SkyShield Airlines: Cybersecurity Governance Program  
 **Enterprise-Style GRC Simulation | Risk, Compliance, Vendor Governance & Dashboards**
 
 This repository contains a full cybersecurity governance, risk, and compliance (GRC) program simulation for a fictional airline, SkyShield Airlines. It demonstrates framework alignment, risk modeling, policies, vendor management, and exception tracking.
